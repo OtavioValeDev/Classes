@@ -13,6 +13,46 @@ public class Cafe {
     char acucar;
     int quantidade, escolha;
 
+    //metodos getter e setters
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setAcucar(char acucar) {
+        this.acucar = acucar;
+
+        if (acucar == 's' || acucar == 'S') {
+            this.mensagem = "Seu café vai vir com açucar";
+        } else {
+            this.mensagem = "Seu café vai vir sem açucar";
+        }
+    }
+
+    public char getAcucar() {
+        return acucar;
+    }
+
+    //metodos
+    public void newMarcaCafe(int numero) {
+        if (numero >= 1 && numero <= marcas.length) {
+            this.marca = marcas[numero - 1];
+        } else {
+            this.marca = "Marca inválida";
+        }
+    }
+
     //escolha do café
     public void marcaCafe() {
         System.out.println("Qual será a marca do seu café?Escolha usando os numeros");
