@@ -34,6 +34,10 @@ public class Main {
         c2.alimentar();
         c2.mostrarDados();
 
+        //chamando a classe gato que herda de animal
+        Gato gato = new Gato("Mingau", 3);
+        gato.emitirSom();
+        gato.alimentar();
 
         //via metodos, só não esqueça de comentar o construtor
 //        Cafe cafe = new Cafe();
