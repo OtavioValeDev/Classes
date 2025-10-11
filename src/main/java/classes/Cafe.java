@@ -11,13 +11,30 @@ public class Cafe {
     String[] marcas = {"Pilão", "Melitta", "Três Corações", "Nescafé"};
     String mensagem, marca;
     char acucar;
-    int quantidade, escolha;
+    int quantidade, escolha, numero;
 
     //construtor
-    public Cafe(char acucar, int quantidade, int escolha) {
+    public Cafe(char acucar, int quantidade, int numero) {
         this.acucar = acucar;
         this.quantidade = quantidade;
-        this.escolha = escolha;
+        this.numero = numero;
+
+        //novamente, uma cópia do newcafe e escolha cafe
+        //funciona somente usando os construtores
+        if (numero>= 1&& numero <= marcas.length){
+            this.marca=marcas[numero-1];
+        }else{
+            this.marca="Escolha uma marca existente";
+        }
+
+        //mesmo role do cafe
+        if (acucar == 's' || acucar == 'S') {
+            mensagem = "Seu café vai vir com açucar";
+            System.out.println(mensagem);
+        } else {
+            mensagem = "Seu café vai vir sem açucar";
+            System.out.println(mensagem);
+        }
     }
 
     //metodos getter e setters
@@ -52,7 +69,8 @@ public class Cafe {
     }
 
     //metodos
-    public void newMarcaCafe(int numero) {
+    //funciona usando get e set
+    public void newMarcaCafe( int numero) {
         if (numero >= 1 && numero <= marcas.length) {
             this.marca = marcas[numero - 1];
         } else {
@@ -60,7 +78,7 @@ public class Cafe {
         }
     }
 
-    //escolha do café
+    //funciona chamando diretamente o metodo
     public void marcaCafe() {
         System.out.println("Qual será a marca do seu café?Escolha usando os numeros");
         for (int i = 0; i < marcas.length; i++) {

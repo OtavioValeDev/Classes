@@ -54,7 +54,7 @@ public class Main {
 //        cafe2.mostraDados();
 
         //via construtor
-        Cafe melitta= new Cafe('5',500,3);
+        Cafe melitta= new Cafe('s',500,2);
         melitta.mostraDados();
     }
 }
