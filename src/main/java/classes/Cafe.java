@@ -1,4 +1,4 @@
-package org.example;
+package classes;
 
 import java.util.Scanner;
 import java.lang.String;
@@ -12,6 +12,13 @@ public class Cafe {
     String mensagem, marca;
     char acucar;
     int quantidade, escolha;
+
+    //construtor
+    public Cafe(char acucar, int quantidade, int escolha) {
+        this.acucar = acucar;
+        this.quantidade = quantidade;
+        this.escolha = escolha;
+    }
 
     //metodos getter e setters
     public void setMarca(String marca) {
