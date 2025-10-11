@@ -1,29 +1,38 @@
 package classes;
 
+//deve ser o mais genérico possivel
+// não use public ou private nos metodos sem usar o super, só assim os filhos conseguem acessar.
+// como um construtor e a tipagem do metodo deve refletir tambem na subclasse
 public class Animal {
-    private String tipoAnimal;
+    private String nome;
+    private int idade;
 
-    //construtor
-    public Animal(String tipoAnimal) {
-        this.tipoAnimal = tipoAnimal;
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    //getters e setter
-    public String getTipoAnimal() {
-        return tipoAnimal;
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
-    public void setTipoAnimal(String tipoAnimal) {
-        this.tipoAnimal = tipoAnimal;
+
+
+    public void emitirSom() {
+        System.out.println("Som do animal");
     }
 
-
-    //metodos
-    public void Cachorro(){
-        System.out.println("o Cachorro latiu: au au");
+    public void alimentar() {
+        System.out.println("O animal está se alimentando");
     }
 
-    public void Peixe(){
-        System.out.println("O peixe fez: glub glub");
+    public void mostrarDados() {
+        System.out.println("Nome do animal:" + nome + ",\n" + "Idade do animal:" + idade + "\n");
     }
 }

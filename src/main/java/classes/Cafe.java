@@ -8,10 +8,10 @@ public class Cafe {
     //instancia a classe Scanner para o input de dados
     Scanner scanner = new Scanner(System.in);
     //atributos
-    String[] marcas = {"Pilão", "Melitta", "Três Corações", "Nescafé"};
-    String mensagem, marca;
-    char acucar;
-    int quantidade, escolha, numero;
+    private String[] marcas = {"Pilão", "Melitta", "Três Corações", "Nescafé"};
+    private String mensagem, marca;
+    private char acucar;
+    private int quantidade, escolha, numero;
 
     //construtor
     public Cafe(char acucar, int quantidade, int numero) {
@@ -21,10 +21,10 @@ public class Cafe {
 
         //novamente, uma cópia do newcafe e escolha cafe
         //funciona somente usando os construtores
-        if (numero>= 1&& numero <= marcas.length){
-            this.marca=marcas[numero-1];
-        }else{
-            this.marca="Escolha uma marca existente";
+        if (numero >= 1 && numero <= marcas.length) {
+            this.marca = marcas[numero - 1];
+        } else {
+            this.marca = "Escolha uma marca existente";
         }
 
         //mesmo role do cafe
@@ -70,7 +70,7 @@ public class Cafe {
 
     //metodos
     //funciona usando get e set
-    public void newMarcaCafe( int numero) {
+    public void newMarcaCafe(int numero) {
         if (numero >= 1 && numero <= marcas.length) {
             this.marca = marcas[numero - 1];
         } else {
