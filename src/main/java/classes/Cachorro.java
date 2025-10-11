@@ -1,4 +1,4 @@
-package org.example;
+package classes;
 
 public class Cachorro {
     //atributos
@@ -6,12 +6,12 @@ public class Cachorro {
     private int idade;
 
     //construtor
-//    public Cachorro(String nome, String raca, String cor, int idade) {
-//        this.nome = nome;
-//        this.raca = raca;
-//        this.cor = cor;
-//        this.idade = idade;
-//    }
+    public Cachorro(String nome, String raca, String cor, int idade) {
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+    }
 
     //    falta os metodos de acesso - getters e setters, eles servem para proteção, pois estamos utilizando atributos em private
     public void setNome(String nome) {
