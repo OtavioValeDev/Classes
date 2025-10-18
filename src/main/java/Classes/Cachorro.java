@@ -1,11 +1,20 @@
 package Classes;
 
-public class Cachorro extends Animal {
-    private String raca, cor;
-    private int idade;
+public class Cachorro{
+    String nome,raca;
+    int idade;
 
-    @Override
-    public void emitirSom(){
-        System.out.println(getNome() + " está latindo");
+    public Cachorro(String nome, String raca, int idade) {
+        this.nome = nome;
+        this.raca = raca;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void mostrarDados(){
+        System.out.println(this.nome+"|"+this.raca+"|"+this.idade);
     }
 }

@@ -1,19 +1,16 @@
 package org.example;
 
-import Classes.Animal;
-import Classes.Cachorro;
-import Classes.Gato;
+import Classes.*;
 
 public class Main {
     public static void main(String[] args) {
-        Animal[] animais = new Animal[3];
+        Pessoa p= new Pessoa("Lucas");
+        Cachorro c1= new Cachorro("Martinez","Dobberman",8);
+        Cachorro c2= new Cachorro("Maria","Golden",2);
 
-        animais[0] = new Cachorro();
-        animais[0].setNome("Pedro");
-        animais[0].emitirSom(); // Pedro está latindo
+        p.adotarCachorro(c1);
+        p.adotarCachorro(c2);
 
-        animais[0] = new Gato();
-        animais[0].setNome("Smile");
-        animais[0].emitirSom();
+        p.listarCachorros();
     }
 }
